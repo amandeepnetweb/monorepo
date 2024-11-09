@@ -21,9 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./webui
 
       - name: Build the package
         run: npm run build
+        working-directory: ./webui
 
       - name: Bump version and publish
         env:
@@ -31,3 +33,4 @@ jobs:
         run: |
           npm version patch  # Adjust to major/minor/patch as needed
           npm publish
+        working-directory: ./webui
