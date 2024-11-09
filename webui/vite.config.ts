@@ -13,9 +13,9 @@ export default defineConfig({
     "process.env.NODE_ENV": '"production"',
   },
   // For marking your library as SSR compatible, so you dont have to use
-  // ssr: {
-  //   noExternal: ["@amandeepnetweb/webui"], // Ensure your library is bundled for SSR
-  // },
+  ssr: {
+    noExternal: ["@amandeepnetweb/webui"], // Ensure your library is bundled for SSR
+  },
   plugins: [
     react(),
     svgr(),

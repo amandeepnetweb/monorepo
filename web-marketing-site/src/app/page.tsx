@@ -1,5 +1,3 @@
-// "use client";
-
 import { Button } from "@amandeepnetweb/webui";
 
 function App() {
