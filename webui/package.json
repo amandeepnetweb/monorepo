@@ -1,6 +1,6 @@
 {
   "name": "@amandeepnetweb/webui",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,7 +18,7 @@
     "preview": "vite preview",
     "link": "npm link",
     "unlink": "npm unlink @amandeepnetweb/webui",
-    "publish": "npm publish"
+    "deploy": "npm publish"
   },
   "peerDependencies": {
     "react": "^19.0.0-rc-5c56b873-20241107",
