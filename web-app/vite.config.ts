@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   // Exclude the webui package from the build, it will not cache the webui package
   optimizeDeps: {
-    exclude: ["webui"],
+    exclude: ["@amandeepnetweb/webui"],
   },
 });

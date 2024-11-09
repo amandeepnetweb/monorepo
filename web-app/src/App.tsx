@@ -1,4 +1,4 @@
-import { Button } from "webui";
+import { Button } from "@amandeepnetweb/webui";
 
 function App() {
   return (

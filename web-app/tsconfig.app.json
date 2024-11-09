@@ -23,7 +23,7 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "webui": ["node_modules/webui"],
+      "@amandeepnetweb/webui": ["node_modules/@amandeepnetweb/webui"],
       "@/*": ["src/*"]
     }
   },

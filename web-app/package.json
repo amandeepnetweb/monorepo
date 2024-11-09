@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "link": "npm link webui",
-    "unlink": "npm unlink webui"
+    "link": "npm link @amandeepnetweb/webui",
+    "unlink": "npm unlink @amandeepnetweb/webui"
   },
   "dependencies": {
     "react": "^18.3.1",
