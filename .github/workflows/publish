@@ -1,0 +1,33 @@
+name: Publish Package to GitHub Packages
+
+on:
+  push:
+    branches:
+      - master # Only trigger on pushes to the master branch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22" # Set to your project's Node.js version
+          registry-url: "https://npm.pkg.github.com" # Set the registry to GitHub Packages
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the package
+        run: npm run build
+
+      - name: Bump version and publish
+        env:
+          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm version patch  # Adjust to major/minor/patch as needed
+          npm publish
