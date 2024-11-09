@@ -33,7 +33,7 @@ jobs:
 
       - name: Bump version and publish
         env:
-          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: |
           npm version patch
           npm publish
