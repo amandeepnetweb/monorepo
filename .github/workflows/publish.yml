@@ -3,7 +3,11 @@ name: Publish Package to GitHub Packages
 on:
   push:
     branches:
-      - master # Only trigger on pushes to the master branch
+      - master
+
+permissions:
+  packages: write
+  contents: read
 
 jobs:
   publish:
@@ -16,8 +20,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22" # Set to your project's Node.js version
-          registry-url: "https://npm.pkg.github.com" # Set the registry to GitHub Packages
+          node-version: "22"
+          registry-url: "https://npm.pkg.github.com"
 
       - name: Install dependencies
         run: npm install
@@ -31,6 +35,6 @@ jobs:
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm version patch  # Adjust to major/minor/patch as needed
+          npm version patch
           npm publish
         working-directory: ./webui
